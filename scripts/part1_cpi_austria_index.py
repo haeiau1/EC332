@@ -75,7 +75,6 @@ def adf_test(series: pd.Series) -> dict[str, float | int | str]:
 
 
 def seasonal_adjust_log_index(index: pd.Series) -> tuple[pd.Series, pd.Series]:
-    """Seasonally adjust CPI by removing monthly dummy effects from log index."""
     df = pd.DataFrame({"log_index": np.log(index.dropna())})
     df["trend"] = np.arange(len(df), dtype=float)
     month_dummies = pd.get_dummies(df.index.month, prefix="month", drop_first=True)
