@@ -1,0 +1,97 @@
+{
+  "data_start": "1989-01-01",
+  "data_end": "2025-07-01",
+  "estimation_start": "1990-01-01",
+  "estimation_end": "2024-10-01",
+  "forecast_start": "2025-01-01",
+  "forecast_end": "2025-07-01",
+  "n_train_observations": 140,
+  "n_forecast_observations": 3,
+  "adf_results": {
+    "usa_gdp_growth": {
+      "test_statistic": -2.8310573374563335,
+      "p_value": 0.053972564614315266,
+      "used_lag": 8,
+      "nobs": 131,
+      "critical_1pct": -3.481281802271349,
+      "critical_5pct": -2.883867891664528,
+      "critical_10pct": -2.5786771965503177,
+      "icbest": 439.5397747558626,
+      "decision_5pct": "Not stationary",
+      "decision_10pct": "Stationary"
+    },
+    "austria_gdp_growth": {
+      "test_statistic": -5.968502820293619,
+      "p_value": 1.9615819030046845e-07,
+      "used_lag": 7,
+      "nobs": 132,
+      "critical_1pct": -3.4808880719210005,
+      "critical_5pct": -2.8836966192225284,
+      "critical_10pct": -2.5785857598714417,
+      "icbest": 518.9584685830271,
+      "decision_5pct": "Stationary",
+      "decision_10pct": "Stationary"
+    }
+  },
+  "selected_lag_by_aic": 11,
+  "selected_orders": {
+    "aic": 11,
+    "bic": 5,
+    "hqic": 5,
+    "fpe": 11
+  },
+  "aic": 0.6223320921741373,
+  "bic": 1.6421101588457412,
+  "hqic": 1.036688565245826,
+  "fpe": 1.8776793969601875,
+  "residual_correlation": {
+    "usa_gdp_growth": {
+      "usa_gdp_growth": 1.0,
+      "austria_gdp_growth": 0.8666882731031174
+    },
+    "austria_gdp_growth": {
+      "usa_gdp_growth": 0.8666882731031174,
+      "austria_gdp_growth": 1.0
+    }
+  },
+  "granger_causality": [
+    {
+      "null_hypothesis": "usa_gdp_growth does not Granger-cause austria_gdp_growth",
+      "caused": "austria_gdp_growth",
+      "causing": "usa_gdp_growth",
+      "test_statistic": 1.2076903129662588,
+      "p_value": 0.28326939059739586,
+      "df": "(11, 212)",
+      "decision_5pct": "Do not reject"
+    },
+    {
+      "null_hypothesis": "austria_gdp_growth does not Granger-cause usa_gdp_growth",
+      "caused": "usa_gdp_growth",
+      "causing": "austria_gdp_growth",
+      "test_statistic": 2.0337242625151655,
+      "p_value": 0.02669325396041183,
+      "df": "(11, 212)",
+      "decision_5pct": "Reject"
+    }
+  ],
+  "forecast_metrics": {
+    "austria_gdp_growth": {
+      "rmse": 2.819390493866567,
+      "mae": 2.6326809227815446
+    },
+    "usa_gdp_growth": {
+      "rmse": 0.8024351457838785,
+      "mae": 0.7885662083135054
+    }
+  },
+  "whiteness_test": {
+    "test_statistic": 15.864848875976152,
+    "p_value": 0.0032059828109586843,
+    "decision_5pct": "Reject no residual autocorrelation"
+  },
+  "normality_test": {
+    "test_statistic": 2223.8939903971714,
+    "p_value": 0.0
+  },
+  "irf_note": "IRFs are non-orthogonalized (orth=False), matching the assignment's assumption of no correlation between equation error terms."
+}

@@ -1,0 +1,85 @@
+{
+  "series_id": "AUTCPIALLMINMEI",
+  "series_title": "Consumer Price Indices (CPIs, HICPs), COICOP 1999: Consumer Price Index: Total for Austria",
+  "source_note": "FRED/OECD series AUTCPIALLMINMEI. Units are Index 2015=100, Not Seasonally Adjusted, Monthly. This is the raw CPI index needed before calculating year-over-year inflation.",
+  "sample_start": "2000-01-01",
+  "sample_end": "2025-03-01",
+  "n_observations_2000_latest": 303,
+  "adf_cpi_index": {
+    "test_statistic": 2.532226112903814,
+    "p_value": 0.9990595108306386,
+    "used_lag": 16,
+    "nobs": 286,
+    "critical_1pct": -3.4534232986669546,
+    "critical_5pct": -2.8716994185534745,
+    "critical_10pct": -2.5721833625116144,
+    "icbest": 135.51769498416184,
+    "decision_5pct": "Not stationary"
+  },
+  "adf_seasonally_adjusted_cpi_index": {
+    "test_statistic": 2.0815686670081837,
+    "p_value": 0.9987700052387487,
+    "used_lag": 15,
+    "nobs": 287,
+    "critical_1pct": -3.453342167806272,
+    "critical_5pct": -2.871663828287282,
+    "critical_10pct": -2.572164381381345,
+    "icbest": 118.25873563868731,
+    "decision_5pct": "Not stationary"
+  },
+  "adf_calculated_yoy_inflation": {
+    "test_statistic": -2.9647635261912324,
+    "p_value": 0.038318657926872175,
+    "used_lag": 16,
+    "nobs": 274,
+    "critical_1pct": -3.4544435065994437,
+    "critical_5pct": -2.8721468827772774,
+    "critical_10pct": -2.572422013959188,
+    "icbest": 157.2761015217945,
+    "decision_5pct": "Stationary"
+  },
+  "adf_stationary_variable": {
+    "test_statistic": -2.9647635261912324,
+    "p_value": 0.038318657926872175,
+    "used_lag": 16,
+    "nobs": 274,
+    "critical_1pct": -3.4544435065994437,
+    "critical_5pct": -2.8721468827772774,
+    "critical_10pct": -2.572422013959188,
+    "icbest": 157.2761015217945,
+    "decision_5pct": "Stationary"
+  },
+  "stationary_variable_name": "Year-over-year inflation from seasonally adjusted CPI index",
+  "transformation_note": "No differencing was applied because ADF rejected a unit root at 5%.",
+  "stationary_variable_stats": {
+    "expected_value_mean": 2.4901807216996996,
+    "variance": 3.964203053604193,
+    "autocorrelation_lag_1": 0.9824919821179203,
+    "autocorrelation_lag_2": 0.9590712450188207,
+    "autocorrelation_lag_3": 0.9321879814493357,
+    "autocorrelation_lag_4": 0.8945911998708088
+  },
+  "arma_training_start": "2015-01-01",
+  "arma_training_end": "2024-12-01",
+  "forecast_year": 2025,
+  "forecast_months_available": 3,
+  "best_arma_order": {
+    "p": 4,
+    "d": 0,
+    "q": 1
+  },
+  "best_arma_aic": 130.06591255880898,
+  "best_arma_bic": 149.5783547582833,
+  "forecast_rmse": 1.2368925172906444,
+  "forecast_mae": 1.2254500741878176,
+  "ljung_box": {
+    "lag_6": {
+      "stat": 2.844056979757528,
+      "p_value": 0.8281494532031594
+    },
+    "lag_12": {
+      "stat": 18.538352769207748,
+      "p_value": 0.10029518101743859
+    }
+  }
+}

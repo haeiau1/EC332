@@ -1,0 +1,3 @@
+null_hypothesis,caused,causing,test_statistic,p_value,df,decision_5pct
+usa_gdp_growth does not Granger-cause austria_gdp_growth,austria_gdp_growth,usa_gdp_growth,1.2076903129662588,0.28326939059739586,"(11, 212)",Do not reject
+austria_gdp_growth does not Granger-cause usa_gdp_growth,usa_gdp_growth,austria_gdp_growth,2.0337242625151655,0.02669325396041183,"(11, 212)",Reject
